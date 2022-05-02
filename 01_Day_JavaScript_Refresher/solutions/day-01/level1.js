@@ -82,7 +82,6 @@ let isFound = (index != -1) ? log(itCompanies[0]) : log('Not Found!');
 log(isFound);
 // 14 -> filter out companies which have more than one 'o'
 function itHasMoreRepeatLetter(letter){
-    const pushed = [];
     const filterByOLetter = letter.toString().split();
     for(let i = 0; i < filterByOLetter.length; i++){
         log(filterByOLetter[i].includes('o'))
@@ -105,14 +104,14 @@ log(getLastThreeCompanies);
 const getMiddleCompany = itCompanies.slice(3, 4);
 log(getMiddleCompany)
 // 20 -> remove the first IT company
-const removeFirst = itCompanies.shift();
-log(removeFirst);
+const removeFirstItCompany = itCompanies.shift();
+log(removeFirstItCompany);
 // 21 -> remove the middle IT company
-const removeMiddle = itCompanies.splice(3,1);
-log(removeMiddle);
+const removeMiddleItCompany = itCompanies.splice(3,1);
+log(removeMiddleItCompany);
 // 22 -> remove the last IT company
-const removeLast = itCompanies.pop();
-log(removeLast);
+const removeLastItCompany = itCompanies.pop();
+log(removeLastItCompany);
 // 23 -> remove all IT companies
-const removeAll = itCompanies.splice();
-log(removeAll)
+const removeAllItCompany = itCompanies.splice();
+log(removeAllItCompany);
