@@ -1,6 +1,9 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import images from './images';
+import cssLogo from './images/css_logo.png';
+import htmlLogo from './images/html_logo.png';
+import jsLogo from './images/js_logo.png';
+import reactLogo from './images/react_logo.png';
 
 const jsxHeading = 'react challenge'
 const sub_heading = 'getting started with react'
@@ -13,21 +16,24 @@ const user = {
 const header = (
     <header className="header">
         <h1 className="heading">{jsxHeading}</h1>
-        <h2 className="sub-heading">{sub_heading}</h2>
+        <h2 className="sub--heading">{sub_heading}</h2>
     </header>
 )
 
 const main = (
     <main className="main">
-        <div>
+        <>
             <ul className="list">
                 {webTechs.map(techs => <li key={techs}>{techs}</li>)}
             </ul>
             <h3>front end technologies</h3>
-            <div className='images-container'>
-                {images}
+            <div className='images--container'>
+                <img className="image" src={htmlLogo} alt="html logo"/>
+                <img className="image" src={cssLogo} alt="css logo"/>
+                <img className="image" src={jsLogo} alt="js logo"/>
+                <img className="image" src={reactLogo} alt="react logo"/>
             </div>
-        </div>
+        </>
     </main>
 )
 

@@ -60,7 +60,7 @@
             color: #fff;
         }
 
-        .sub-heading {
+        .sub--heading {
             font-size: 1.5rem;
             font-family: 'Abel', sans-serif;
             margin-block-start: 1rem;
@@ -70,14 +70,15 @@
         }
 
         .heading,
-        .sub-heading,
+        .sub--heading,
+        h3,
         p { 
             letter-spacing: .1rem;
             text-transform: capitalize;
         }
 
         .main {
-            height: 50vh;
+            height: 100%;
             grid-area: main;
         }
 
@@ -92,6 +93,26 @@
             font-size: 1rem;
             font-family: 'Roboto', sans-serif;
             font-weight: 700;
+        }
+
+        .main h3 {
+            font-size: initial;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: normal;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .images--container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image {
+            width: 100%;
+            object-fit: cover;
+            max-width: 6rem;
         }
 
         .footer {
