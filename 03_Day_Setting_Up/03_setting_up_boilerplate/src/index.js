@@ -1,73 +1,112 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import cssLogo from './images/css_logo.png';
-import htmlLogo from './images/html_logo.png';
-import jsLogo from './images/js_logo.png';
-import reactLogo from './images/react_logo.png';
-import UserCard from './UserCard.js';
+import React from 'react'
+import ReactDOM from 'react-dom'
+// To get the root element from the HTML document
+import asabenehImage from './images/asabeneh.jpg'
+import * as everything from './math.js'
+// to import the doSomeMath from the math.js with or without extension
+import doSomeMath, { addTwo } from './math.js'
 
-const jsxHeading = 'react challenge'
-const sub_heading = 'getting started with react'
-const webTechs = ['HTML', 'CSS', 'JS', 'React']
-const user = {
-    fName: 'Damian',
-    lName: 'Ponce'
+
+
+console.log(addTwo(5, 5))
+console.log(doSomeMath.addTwo(5, 5))
+console.log(everything)
+// JSX element, header
+
+
+// JSX element, header
+const welcome = 'Welcome to 30 Days Of React'
+const title = 'Getting Started React'
+const subtitle = 'JavaScript Library'
+const author = {
+  firstName: 'Asabeneh',
+  lastName: 'Yetayeh',
 }
+const date = 'Oct 2, 2020'
 
+// JSX element, header
 const header = (
-    <header className="header">
-        <h1 className="heading">{jsxHeading}</h1>
-        <h2 className="sub--heading">{sub_heading}</h2>
-    </header>
-)
-
-const main = (
-    <main className="main">
-        <div className="front--end__techs">
-            <ul className="list">
-                {webTechs.map(techs => <li key={techs}>{techs}</li>)}
-            </ul>
-            <h3>front end technologies</h3>
-            <div className='images--container'>
-                <img className="image" src={htmlLogo} alt="html logo"/>
-                <img className="image" src={cssLogo} alt="css logo"/>
-                <img className="image" src={jsLogo} alt="js logo"/>
-                <img className="image" src={reactLogo} alt="react logo"/>
-            </div>
-        </div>
-        <article className="subscribe--container">
-            <h1 className="subscribe">subscribe</h1>
-            <p className="text">Sign up with your email address to receive news and updates.</p>
-            <form className="subscribe--form">
-                <div className="input--container">
-                    <input type="text" name="fname" placeholder="Full name"/>
-                    <input type="text" name="lname" placeholder="Last name"/>
-                    <input type="email" name="email" placeholder="Email"/>
-                </div>
-                <button className="subscribe--btn">Subscribe</button>
-            </form>
-        </article>
-        <article className='user--card'>
-            <UserCard/>
-        </article>
-    </main>
-)
-
-const footer = (
-    <footer className="footer">
-        <p>copyright - 2022</p>
-        <p>{user.fName} {user.lName}</p>
-    </footer>
-)
-
-const app = (
-    <div className="container">
-        {header}
-        {main}
-        {footer}
+  <header>
+    <div className='header-wrapper'>
+      <h1>{welcome}</h1>
+      <h2>{title}</h2>
+      <h3>{subtitle}</h3>
+      <p>
+        Instructor: {author.firstName} {author.lastName}
+      </p>
+      <small>Date: {date}</small>
     </div>
+  </header>
 )
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(app)
+const numOne = 3
+const numTwo = 2
+
+const result = (
+  <p>
+    {numOne} + {numTwo} = {numOne + numTwo}
+  </p>
+)
+
+const yearBorn = 1820
+const currentYear = new Date().getFullYear()
+const age = currentYear - yearBorn
+const personAge = (
+  <p>
+    {' '}
+    {author.firstName} {author.lastName} is {age} years old
+  </p>
+)
+
+// JSX element, main
+const techs = ['HTML', 'CSS', 'JavaScript']
+const techsFormatted = techs.map((tech) => <li>{tech}</li>)
+
+const user = (
+  <div>
+    <img src={asabenehImage} alt='asabeneh image' />
+  </div>
+)
+
+// JSX element, main
+const main = (
+  <main>
+    <div className='main-wrapper'>
+      <p>
+        Prerequisite to get started{' '}
+        <strong>
+          <em>react.js</em>
+        </strong>
+        :
+      </p>
+      <ul>{techsFormatted}</ul>
+      {result}
+      {personAge}
+      {user}
+    </div>
+  </main>
+)
+
+const copyRight = 'Copyright 2020'
+
+// JSX element, footer
+const footer = (
+  <footer>
+    <div className='footer-wrapper'>
+      <p>{copyRight}</p>
+    </div>
+  </footer>
+)
+
+// JSX element, app
+const app = (
+  <div className='app'>
+    {header}
+    {main}
+    {footer}
+  </div>
+)
+
+const rootElement = document.getElementById('root')
+// we render the JSX element using the ReactDOM package
+ReactDOM.render(app, rootElement)
