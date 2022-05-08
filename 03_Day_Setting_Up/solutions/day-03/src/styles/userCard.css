@@ -1,0 +1,130 @@
+.card--container {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    position: relative;
+    background: #fff;
+}
+
+.card--image__container {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-inline-start: 0;
+}
+
+.user--image {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    place-items: center;
+    margin-inline: 0;
+}
+
+figure img { grid-row: 1; }
+
+figcaption {
+    grid-row: 2;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    place-items: center;
+}
+
+.card--name,
+[type="checkbox"] { grid-row: 1; }
+
+.card--name { grid-column: 1; }
+
+[type="checkbox"]{ grid-column: 2; }
+
+.card--info { grid-column: 1 / -1; }
+
+.card--name {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: #010010;
+}
+
+[type="checkbox"] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    padding: 0;
+    margin-inline-start: -1rem;
+    border-radius: 50%;
+    background: #24ccc4;
+}
+
+[type="checkbox"]::after {
+    content: '🗸';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.card--info {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: .75rem;
+    text-transform: capitalize;
+    color: #010010;
+}
+
+.card--container h4 {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: initial;
+    text-transform: uppercase;
+    color: #010010;
+}
+
+.buttons--container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    /* width: 100%; */
+    height: auto;
+    padding: .5rem 1rem;
+    margin: .25rem;
+    border: 0;
+    border-radius: .35rem;
+    background: #24ccc4;
+    color: #fff;
+}
+
+.date--container {
+    display: flex;
+    align-items: center;
+    padding-block: 1rem;
+    width: auto;
+}
+
+.date--container span {
+    font-size: .75rem;
+    font-weight: 300;
+}
+
+.date--container p {
+    color: #010010;
+    font-size: .7rem;
+    font-weight: 300;
+    text-transform: initial;
+}
+
+.date--container time { font-weight: normal; }

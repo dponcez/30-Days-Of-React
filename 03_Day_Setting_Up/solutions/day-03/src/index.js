@@ -5,6 +5,8 @@ import htmlLogo from './images/html_logo.png';
 import jsLogo from './images/js_logo.png';
 import reactLogo from './images/react_logo.png';
 import UserCard from './UserCard.js';
+import './styles/main.css';
+import './styles/userCard.css';
 
 const jsxHeading = 'react challenge'
 const sub_heading = 'getting started with react'
