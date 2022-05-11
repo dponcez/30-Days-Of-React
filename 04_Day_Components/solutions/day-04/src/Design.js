@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './styles/design.css';
 
 const Design = () => {
   return (
-    <article className="subscribe--container">
+    <article className="background">
+      <div className="subscribe--container">
         <h1 className="subscribe">subscribe</h1>
         <p className="text">Sign up with your email address to receive news and updates.</p>
         <form className="subscribe--form">
@@ -13,6 +15,7 @@ const Design = () => {
             </div>
             <button className="subscribe--btn">Subscribe</button>
         </form>
+      </div>
     </article>
   )
 }

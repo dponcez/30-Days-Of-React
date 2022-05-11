@@ -1,5 +1,6 @@
 import React from 'react';
 import userImage from './images/asabeneh.jpg';
+import './styles/userCard.css';
 
 const UserCard = () => {
   const webTechs = [
@@ -11,7 +12,8 @@ const UserCard = () => {
     'D3.js', 'Gatsby', 'Docker', 'Heroku', 'Git'
   ];
   return (
-    <div className="card--container">
+    <div className="card--bg">
+      <article className="card--container">
         <div className="card--image__container">
             <figure>
                 <img className="user--image" src={userImage} alt="Asabeneh Yetayeh image"/>
@@ -30,6 +32,7 @@ const UserCard = () => {
             <span className="fa-solid fa-clock"></span>
             <p>Joined on <time>Aug 20, 2020</time></p>
         </div>
+      </article>
     </div>
   )
 }

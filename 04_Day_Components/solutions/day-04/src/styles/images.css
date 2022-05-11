@@ -1,0 +1,33 @@
+.front--end {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    height: calc(100vh - 1rem);
+    background-color: #f0f1f7;
+}
+
+.title {
+    padding-block-end: 3rem;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #010010;
+    text-transform: capitalize;
+}
+
+.images--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    width: 100%;
+    min-width: 50rem;
+}
+
+.image {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
