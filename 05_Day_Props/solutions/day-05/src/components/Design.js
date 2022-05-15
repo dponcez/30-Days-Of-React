@@ -12,7 +12,10 @@ const Button = ({subscribe, onClick}) => (
 
 const Form = ({handleSubmit}) => {
   return (
-    <form className='subscribe--form'>
+    <form 
+      className='subscribe--form'
+      onSubmit={(e) => e.preventDefault()}
+    >
       <div className='input--container'>
         <input type="text" name="fname" placeholder="Full name"/>
         <input type="text" name="lname" placeholder="Last name"/>
@@ -32,10 +35,7 @@ const Design = ({text, subscribe, handleSubmit}) => {
       <div className='subscribe--container'>
         <h1 className='subscribe'>{subscribe}</h1>
         <p className='text'>{text}</p>
-        <Form 
-          onSubmit={(e) => e.preventDefault()}
-          handleSubmit={handleSubmit}
-        />
+        <Form handleSubmit={handleSubmit}/>
       </div>
     </article>
   )

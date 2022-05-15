@@ -1,9 +1,10 @@
 import React from 'react'
+import '../styles/hexaColor.css'
 
-const HexaColorGenerator = () => {
-  return (
-    <div>HexaColorGenerator</div>
-  )
-}
+const HexaColorGenerator = ({hexaColor}) => (
+  <div className='hexa--container'>
+    {hexaColor}
+  </div>
+)
 
 export default HexaColorGenerator
