@@ -1,0 +1,42 @@
+.small--text {
+    display: block;
+    font: normal .75rem 'Montserrat', sans-serif;
+}
+
+.small--text::first-letter { text-transform: capitalize; }
+
+.population--container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    width: 100%;
+    max-width: 45rem;
+
+    padding-block-start: 1rem;
+}
+
+.population {
+    display: grid;
+    grid-template-columns: 14rem 24rem 6rem;
+    gap: .5rem;
+}
+
+.country,
+.graph,
+.number--format {
+    display: flex;
+    align-items: center;
+}
+
+.country,
+.number--format {
+    font-family: 'Montserrat';
+    font-size: .85rem;
+}
+
+.country { font-weight: 500; }
+
+.number--format { 
+    justify-content: center; 
+}

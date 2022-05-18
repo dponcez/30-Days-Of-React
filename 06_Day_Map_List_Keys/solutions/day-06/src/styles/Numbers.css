@@ -1,0 +1,29 @@
+.number--generator {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 45rem;
+    height: auto;
+
+    padding-block-start: 1rem;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 5rem;
+    height: 5rem;
+    margin: .1rem;
+
+    background: hsl(350, 50%, 50%)
+}
+
+.number {
+    font: normal 1.15rem 'Roboto', sans-serif;
+    color: hsl(100, 100%, 100%)
+}
