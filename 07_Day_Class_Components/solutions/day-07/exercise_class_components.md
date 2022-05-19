@@ -2,7 +2,9 @@
 
 ### 1. How do you write a pure JavaScript function
 
-We write a pure JavaScript function using the syntax below, this function should be return the same value, that means the value never change.
+We write a pure JavaScript function using the syntax below.
+
+This function should be return the same value, that means the value never change.
 
 ```js
 function calculatePrice(amount){
@@ -97,8 +99,7 @@ ReactDOM.render(
 
 ### 3. What is class based React component ?
 
-class based component used to have state and life cycle methods, is also a child of
-React.Component and it has a built-in render method and it may have a constructor method.
+class based component used to have state and life cycle methods, is also a child of React.Component and it has a built-in render method and it may have a constructor method.
 
 ### 4. What is the difference between functional React component and class based React component ?
 
@@ -108,7 +109,60 @@ A functional component is just a plain JavaScript function that accepts props as
 
 ### 5. When do we need to use class based components instead of functional components
 
-The new release of React, use class based component is not possible, the version 18.1.0, does not allows to work with class component, instead of use a class compontent we should write our component using a functional component.
+In class-based component, the render method will be called, whenever the state of the component changes, the render method should be required in each class compenent, and also this method should be pure and return the same result each time it's invoked. More information about 'class-based component, visit [reactjs](https://reactjs.org/docs/react-component.html#render)
+
+Class-base component are built-in ES6
+
+```js
+// ES6
+class Header extends React.Component {
+    render(){
+        return(
+            <header>
+                <h1>Heading</h1>
+            </header>
+        )
+    }
+}
+```
+
+or
+
+```js
+class Header extends React.Component {
+    render(){
+        return <h1>Heading</h1>
+    }
+}
+```
+
+Functional component render the UI (User Interface) based on props, it help us to work more effecently, because we can use ES6 to write our components or function as well, but most of the time we write our component using ES6, but is not required to use it.
+
+Example of ES6 and function component
+```js
+// ES6
+const Header = () => {
+    return (
+        <header>
+            <h1>Heading</h1>
+        </header>
+    )
+}
+```
+
+We can write the example above like so.
+
+```js
+const Header = () => <header><h1>heading</h1></header>
+
+// Or
+
+const Header = (props) => (
+    <header>
+        <h1>Heading</h1>
+    </header>
+)
+```
 
 ### 6. What is the use cases of class based component ?
 
@@ -118,7 +172,7 @@ React class based components are the bread and butter of most modern web apps bu
 
 ### 7. Which type of component do use most frequently ? functional or class-based component
 
-Most of the time I use functional component instead of class based component, but before the new version of React I usually used class based component.
+Most of the time a class-based component is used instead of functional component, but when the new version of React was released, it allowed us to write functional component to our applications.
 
 ### 8. What is React life cycle ?
 
