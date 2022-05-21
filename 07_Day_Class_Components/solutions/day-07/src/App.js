@@ -3,6 +3,7 @@ import UserCard from './components/UserCard'
 import userImage from './images/asabeneh.jpg'
 
 class App extends React.Component {
+
     showDate = (time) => {
         const months = [
             'January',
@@ -25,6 +26,7 @@ class App extends React.Component {
 
         return `${month} ${date}, ${year}`
     }
+    
     render(){
         const webTechs = [
             'HTML', 'CSS', 'Sass', 'JS', 
