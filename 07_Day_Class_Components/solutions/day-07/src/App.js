@@ -1,5 +1,6 @@
 import React from 'react'
 import UserCard from './components/UserCard'
+import Design from './components/Design'
 import userImage from './images/asabeneh.jpg'
 
 class App extends React.Component {
@@ -47,6 +48,12 @@ class App extends React.Component {
         const technologies = webTechs.map((techs, index) => (
             <button className='btn' key={index}>{techs}</button>
         ))
+
+        const subscribe = 'subscribe'
+        const text = 'Sign up with your email address to receive news and updates.'
+        const handleSubmit = () => {
+            alert('Successfully subscribed!')
+        }
         
         return(
             <div className='App'>
@@ -54,6 +61,11 @@ class App extends React.Component {
                     userInfo={userInfo}
                     webTechs={technologies}
                     showDate={this.showDate(new Date())}
+                />
+                <Design 
+                    subscribe={subscribe}
+                    text={text}
+                    handleSubmit={handleSubmit}
                 />
             </div>
         )
