@@ -1,14 +1,6 @@
 import React, { Component } from 'react'
 import '../styles/UserCard.css'
-
-const Button  = ({text, onClick}) => (
-  <button 
-    className='btn primary--btn' 
-    onClick={onClick}
-  >
-      {text}
-  </button>
-)
+import Button from './Button'
 
 const Buttons = ({webTechs}) => <>{webTechs}</>
 
@@ -40,10 +32,10 @@ class UserCard extends Component {
     const newStateColor = this.state.color
     
     const newBackgroundColor = (newStateBgColor === backgroundColor) ?
-      'hsl(350, 50%, 50%)' : ''
+      'hsl(202, 83%, 48%)' : ''
     
     const newColor = (newStateColor === color) ?
-      '' : '#ffffff'
+      '#ffffff' : ''
     
     this.setState({
       backgroundColor: newBackgroundColor,
@@ -58,13 +50,13 @@ class UserCard extends Component {
         <article 
           className="card--container" 
           style={{
-            backgroundColor: this.state.backgroundColor
+            backgroundColor: this.state.backgroundColor,
           }}
       >
           <div className="card--image__container">
-              <UserImage style={{color: this.state.color}} userInfo={this.props.userInfo}/>
+              <UserImage userInfo={this.props.userInfo}/>
           </div>
-          <h4>skills</h4>
+          <h4 style={{color: this.state.color}}>skills</h4>
           <div className='buttons--container'>
               <Buttons webTechs={this.props.webTechs}/>
           </div>

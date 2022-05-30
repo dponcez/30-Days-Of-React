@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UserCard from './components/UserCard';
+import RandomCountrySelector from './components/RandomCountrySelector'
 import userImage from './images/asabeneh.jpg';
 
 class App extends Component {
@@ -30,6 +31,7 @@ class App extends Component {
           userInfo={userInfo}
           webTechs={technologies}
         />
+        <RandomCountrySelector/>
       </div>
     );
   }
