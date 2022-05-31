@@ -153,7 +153,8 @@ figcaption {
 .date--container time { font-weight: normal; }
 
 /* Change background button */
-.primary--btn {
+.btn.primary--btn {
+    width: 10rem;
     text-transform: capitalize;
     box-shadow: .35vmin .5vmin .175vmin rgba(0,0,0,.75);
     background-image: linear-gradient(

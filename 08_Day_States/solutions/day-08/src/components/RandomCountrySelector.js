@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Button from './Button'
 import countriesData from '../data/countries';
+import '../styles/RandomCountrySelector.css';
+import Button from './Button';
 
 const countries = countriesData
 
@@ -30,7 +31,7 @@ class Countries extends Component {
                 <div className='populations' key={index}>
                     <figure className='image--container'>
                         <img className='flag' src={flag} alt={name}/>
-                        <figcaption>
+                        <figcaption className='name--container'>
                             <p className='country--name'>{name}</p>
                         </figcaption>
                     </figure>
@@ -54,7 +55,7 @@ class RandomCountrySelector extends Component {
     constructor(props){
         super(props)
         this.state = {
-            index: (() => Math.floor(Math.random() * countries.length))()
+            index: 0
         }
     }
 
@@ -65,13 +66,13 @@ class RandomCountrySelector extends Component {
     }
     render(){
         return(
-            <>
+            <div className='content'>
                 <Header/>
                 <Countries
                     index={this.state.index}
                     onChangeCountry={this.onChangeCountry}
                 />
-            </>
+            </div>
         )
     }
 }
