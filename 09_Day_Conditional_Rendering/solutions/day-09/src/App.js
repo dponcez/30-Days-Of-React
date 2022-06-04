@@ -1,10 +1,10 @@
 import React from 'react'
-import ChangeBackgroundSeason from './components/ChangeBackgroundSeason'
+import ChangeSeasonBackground from './components/ChangeSeasonSeasonBack'
 
 const App = () => {
   return (
     <div>
-        <ChangeBackgroundSeason/>
+        <ChangeSeasonBackground/>
     </div>
   )
 }
