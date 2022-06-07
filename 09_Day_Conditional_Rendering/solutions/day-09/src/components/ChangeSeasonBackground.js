@@ -1,73 +1,141 @@
-import React, { Component } from 'react'
-import Button from './Button'
-
-// Button style
-const buttonStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: 'auto',
-  height: '3rem',
-  padding: '1rem 2rem',
-  border: 0,
-  borderRadius: '.5rem',
-  boxShadow: '.25vmin .35vmin .7vmin rgba(0,0,0,.7)',
-  cursor: 'pointer'
-}
-
-// Header style
-const headerStyle = {
-  autumn: {
-    backgroundColor: 'hsl(25, 60%, 53%)'
-  },
-  winter: {
-    backgroundColor: 'hsl(215, 50%, 43%)'
-  },
-  spring: {
-    backgroundColor: 'hsl(125, 65%, 43%)'
-  },
-  summer: {
-    backgroundColor: 'hsl(125, 35%, 43%)'
-  }
-}
+import React, { useEffect, useState } from 'react'
 
 // Season: Autumn, Winter, Spring, Summer
-const Header = ({bgColor, season}) => (
-  <header style={bgColor} className='header'>
-    <h1 className='heading'>{season}</h1>
-  </header>
-)
+const ChangeSeasonBackground = ({imageInfo, showDate, now}) => {
+  const [currentTime, setCurrentTime] = useState(showDate(now))
+  useEffect(() => {
+    setInterval(() => {
+      setCurrentTime(showDate(new Date()))
+    }, 1000)
+  }, [currentTime])
 
-class ChangeSeasonBackground extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      seasonOn: true,
+  const onHandleUpdateImage = () => {
+    let output = '';
+    let isTrue = true;
+    const currentTime = new Date().getHours()
+    switch(isTrue){
+      case currentTime >= 0 && currentTime < 12:
+        output = imageInfo.autumn;
+        break;
+      case currentTime >= 12 && currentTime < 18:
+        output = imageInfo.spring;
+        break;
+      case currentTime >= 18 && currentTime < 21:
+        output = imageInfo.winter;
+        break;
+      case currentTime >= 21 && currentTime < 24:
+        output = imageInfo.summer;
+        break
     }
-    this.handleChangeBackground = this.handleChangeBackground.bind(this)
+
+    return output
   }
 
-  handleChangeBackground(){
-    this.setState(prevState => ({
-      seasonOn: !prevState.seasonOn
-    }))
+  const updateSeasonName = () => {
+    let output = '';
+    let isTrue = true;
+    const currentTime = new Date().getHours()
+    switch(isTrue){
+      case currentTime >= 0 && currentTime < 12:
+        output = imageInfo.seasonName[0];
+        break;
+      case currentTime >= 12 && currentTime < 18:
+        output = imageInfo.seasonName[1];
+        break;
+      case currentTime >= 18 && currentTime < 21:
+        output = imageInfo.seasonName[2];
+        break;
+      case currentTime >= 21 && currentTime < 24:
+        output = imageInfo.seasonName[3];
+        break
+    }
+
+    return output
   }
 
-  render(){
-    return (
-      <div>
-        <Header 
-          season={handleChangeBackground}
-          style={this.state.seasonOn ? headerStyle.autumn : headerStyle.spring ? headerStyle.winter : headerStyle.summer}
-        />
-        <Button
-          style={buttonStyle}
-          text='Autumn'
-          onClick={handleChangeBackground}
-        />
-      </div>
-    )
+  const updateUrl = () => {
+    let output = '';
+    let isTrue = true;
+    const currentTime = new Date().getHours()
+    switch(isTrue){
+      case currentTime >= 0 && currentTime < 12:
+        output = imageInfo.sourceUrls[0];
+        break;
+      case currentTime >= 12 && currentTime < 18:
+        output = imageInfo.sourceUrls[1];
+        break;
+      case currentTime >= 18 && currentTime < 21:
+        output = imageInfo.sourceUrls[2];
+        break;
+      case currentTime >= 21 && currentTime < 24:
+        output = imageInfo.sourceUrls[3];
+        break
+    }
+
+    return output
   }
+
+  const updateImageOwner = () => {
+    let output = '';
+    let isTrue = true;
+    const currentTime = new Date().getHours()
+    switch(isTrue){
+      case currentTime >= 0 && currentTime < 12:
+        output = imageInfo.name[0];
+        break;
+      case currentTime >= 12 && currentTime < 18:
+        output = imageInfo.name[1];
+        break;
+      case currentTime >= 18 && currentTime < 21:
+        output = imageInfo.name[2];
+        break;
+      case currentTime >= 21 && currentTime < 24:
+        output = imageInfo.name[3];
+        break
+    }
+
+    return output
+  }
+
+  const updateUnsplashUrl = () => {
+    let output = '';
+    let isTrue = true;
+    const currentTime = new Date().getHours()
+    switch(isTrue){
+      case currentTime >= 0 && currentTime < 12:
+        output = imageInfo.unsplashUrls[0];
+        break;
+      case currentTime >= 12 && currentTime < 18:
+        output = imageInfo.unsplashUrls[1];
+        break;
+      case currentTime >= 18 && currentTime < 21:
+        output = imageInfo.unsplashUrls[2];
+        break;
+      case currentTime >= 21 && currentTime < 24:
+        output = imageInfo.unsplashUrls[3];
+        break
+    }
+
+    return output
+  }
+
+  return(
+    <header className='header'>
+      <h1 className='heading'>{updateSeasonName()}</h1>
+      <figure className='figure'>
+        <img src={onHandleUpdateImage()} loading='lazy' alt={updateSeasonName()}/>
+        <figcaption className='figcaption'>
+          <p className='info'>
+            {updateSeasonName()}
+          </p>
+          <p>photo by <a href={updateUrl()}>
+            {updateImageOwner()}
+            </a> on <a href={updateUnsplashUrl()}>{imageInfo.title}</a></p>
+          <small>{currentTime}</small>
+        </figcaption>
+      </figure>
+    </header>
+  )
 }
 
 export default ChangeSeasonBackground
