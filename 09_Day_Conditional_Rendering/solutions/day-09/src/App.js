@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ChangeSeasonBackground from './components/ChangeSeasonBackground'
 import ChangeTimeBackground from './components/ChangeTimeBackground'
+import LoadFetchData from './components/LoadFetchData'
 import autumn from './images/autumn.jpg'
 import spring from './images/spring.jpg'
 import summer from './images/summer.jpg'
@@ -102,7 +103,7 @@ class App extends Component {
 
     return (
       <div className='App'>
-          <ChangeTimeBackground
+          {/* <ChangeTimeBackground
             now={now}
             showDate={this.showDate}
             imageInfo={imageInfo}
@@ -111,7 +112,8 @@ class App extends Component {
             now={now}
             showDate={this.showDate}
             imageInfo={imageInfo}
-          />
+          /> */}
+          <LoadFetchData/>
       </div>
     )
   }
