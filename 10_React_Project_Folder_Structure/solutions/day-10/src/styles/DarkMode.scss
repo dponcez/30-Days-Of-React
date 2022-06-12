@@ -1,0 +1,35 @@
+:root {
+    --white-color: #ffffff;
+    --black-color: #010100;
+    --darken-blue-color: #090810;
+    --dark-blue: #0f131f;
+}
+
+.switch {
+    position: absolute;
+    top: 1.75rem;
+    right: 1rem
+}
+
+#light .header {
+    background-color: var(--white-color);
+    color: var(--black-color)
+}
+
+#dark .header {
+    background-color: var(--dark-blue);
+    color: var(--white-color);
+
+    .heading { color: var(--white-color); }
+
+    .nav {
+        background-color: var(--darken-blue-color);
+        
+        .link { 
+            color: var(--white-color); 
+            &::before {
+                border-bottom: .2rem solid var(--white-color);
+            }
+        }
+    }
+}

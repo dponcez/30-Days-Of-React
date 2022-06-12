@@ -1,7 +1,6 @@
 import React from 'react'
 import react_logo from '../../assets/icons/react_logo.png'
 import '../../styles/Header.scss'
-import DarkMode from '../DarkMode/DarkMode'
 import Nav from '../Nav/Nav'
 
 const Header = () => {
@@ -16,7 +15,6 @@ const Header = () => {
         <img style={logo} src={react_logo} alt='react logo'/>
       </div>
       <Nav/>
-      <DarkMode/>
       <h1 className='heading'>30 Days Of React Challenge</h1>
     </header>
   )
