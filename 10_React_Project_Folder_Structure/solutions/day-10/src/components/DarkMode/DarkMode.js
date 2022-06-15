@@ -31,7 +31,21 @@ const DarkMode = () => {
   }
   return (
     <div className='toggle--container'>
-      <input
+      <div className='switch--container'>
+        <div className='switch--bg'>
+          <div className='half--left'>
+            {/* svg goes here */}
+            {icon_sun}
+          </div>
+          <div className='half--right'>
+            {/* svg goes here */}
+            {icon_moon}
+          </div>
+        </div>
+        <div className='switch--handle'></div>
+        <input type='checkbox' role='switch' aria-checked='false'/>
+      </div>
+      {/* <input
         type='checkbox'
         className='checkbox'
         onChange={setTheme}
@@ -39,7 +53,7 @@ const DarkMode = () => {
       <div className='slider'>
         <span style={sun}></span>
         <span style={moon}></span>
-      </div>
+      </div> */}
     </div>
   )
 }

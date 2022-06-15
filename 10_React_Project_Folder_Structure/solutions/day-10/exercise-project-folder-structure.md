@@ -1,4 +1,4 @@
-# Project Folder Structure
+# React Project Folder Structure
 
 #### What is the importance of React Folder Structure and File Naming.
 

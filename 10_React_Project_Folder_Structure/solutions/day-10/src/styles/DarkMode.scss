@@ -6,14 +6,59 @@
 }
 
 .switch {
-    position: absolute;
+    position: fixed;
     top: 1.75rem;
-    right: 1rem
+    right: 1rem;
+    z-index: 2
 }
 
 #light .header {
     background-color: var(--white-color);
     color: var(--black-color)
+}
+
+#light .background {
+    background-color: #f9f7f7;
+
+    .subscribe--container {
+        background-color: #71b4e0;
+    }
+
+    .subscribe--form {
+        & input { 
+            border: 0;
+            background: var(--white-color); 
+        }
+    }
+}
+
+#light .container {
+    background-color: var(--white-color);
+
+    .heading,
+    .text { color: hsl(340, 10%, 10%); }
+}
+
+#light .card--bg {
+    background-color: #f1f0f7;
+
+    .card--container {
+        background: var(--white-color);
+
+        & figure {
+            & figcaption {
+                .card--name,
+                .card--info { color: var(--black-color); }
+            }
+        }
+
+        & h4 { color: var(--black-color); }
+
+        .date--container {
+            & span,
+            & p { color: var(--black-color); }
+        }
+    }
 }
 
 #dark .header {
@@ -30,6 +75,52 @@
             &::before {
                 border-bottom: .2rem solid var(--white-color);
             }
+        }
+    }
+}
+
+#dark .background {
+    background-color: var(--dark-blue);
+
+    .subscribe--container {
+        background-color: var(--white-color);
+    }
+
+    .subscribe--form {
+        & input {
+            border: .1rem solid var(--dark-blue);
+            background: #f5f5f5;
+        }
+    }
+}
+
+#dark .container {
+    background-color: var(--dark-blue);
+
+    .heading, 
+    .text {
+        color: var(--white-color)
+    }
+}
+
+#dark .card--bg {
+    background-color: var(--dark-blue);
+
+    .card--container {
+        background: #212b4a;
+
+        & figure {
+            & figcaption {
+                .card--name,
+                .card--info { color: var(--white-color); }
+            }
+        }
+
+        & h4 { color: var(--white-color); }
+
+        .date--container {
+            & span,
+            & p { color: var(--white-color); }
         }
     }
 }

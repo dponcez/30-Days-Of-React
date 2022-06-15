@@ -16,7 +16,7 @@
 
     .logo--container {
         transform: translate(25%, 25%);
-        z-index: 1;
+        z-index: 2;
     }
 
     .heading {
@@ -37,6 +37,7 @@
         width: var(--size);
         height: 5rem;
         background-color: hsl(350, 100%, 0%);
+        z-index: 1;
 
         .menu {
             justify-content: space-between;
@@ -74,62 +75,4 @@
             }
         }
     }
-
-    // .toggle--container {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     width: 2rem;
-    //     height: 1rem;
-    //     top: 1.85rem;
-    //     left: 92%;
-    //     border: .1rem solid var(--font-color);
-    //     background-image: linear-gradient(
-    //         45deg,
-    //         #04898d,
-    //         #2c3e50
-    //     );
-    //     border-radius: 5rem;
-    //     box-shadow: .2rem .2rem .7rem 0 rgba(0,0,0,.35) inset,
-    //                 -.2rem -.2rem .7rem 0 rgba(255,255,255,.7) inset;
-    //     cursor: pointer;
-
-    //     .checkbox { 
-    //         appearance: none;
-    //         padding: .5rem 1rem;
-    //         border-radius: 5rem;
-    //         cursor: pointer;
-
-    //         &:checked ~ .slider {
-    //             left: .975rem;
-    //             background-color: transparent;
-    //             transform: rotate(360deg);
-    //         }
-
-    //         &:checked ~ .slider span:first-child { display: none; }
-    //         &:checked ~ .slider span:last-child { 
-    //             display: block;
-    //             transform-origin: .4rem;
-    //             transform: rotate(215deg);
-    //         }
-    //     }
-
-    //     .slider {
-    //         --sz: .75rem;
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: center;
-    //         width: var(--sz);
-    //         height: var(--sz);
-    //         position: absolute;
-    //         left: .1rem;
-    //         border-radius: calc(var(--size) * .5);
-    //         background-color: transparent;
-    //         transform: rotate(0deg);
-    //         transform-origin: .4rem;
-    //         transition: .5s;
-
-    //         & span:last-child { display: none; }
-    //     }
-    // }
 }
