@@ -11,12 +11,12 @@
 .form--group { 
   display: flex; 
   align-self: flex-end;
-
-  & label {
-    display: inline-block;
-    font: 500 calc(var(--padding) * .85) var(--abel);
-    padding-inline-end: .5rem;
-  }
-
-  & input { width: 15rem; }
 }
+
+.form-group label {
+  display: inline-block;
+  font: 500 calc(var(--padding) * .85) var(--abel);
+  padding-inline-end: .5rem;
+}
+
+.form-group input { width: 15rem; }
