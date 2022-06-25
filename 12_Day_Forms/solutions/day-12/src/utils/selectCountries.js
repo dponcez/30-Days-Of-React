@@ -1,4 +1,4 @@
-export const options = [
+const options = [
   {
     value: '',
     label: '-- Select Country --'
@@ -56,3 +56,5 @@ export const options = [
     label: 'Mexico'
   }
 ]
+
+export default options

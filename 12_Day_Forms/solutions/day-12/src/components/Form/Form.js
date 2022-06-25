@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import FormGroup from './formGroup'
-class Form extends Component {
-  constructor(props){
-    super(props)
-  }
+import state from '../../utils/states'
+import '../../styles/Form.scss'
 
-  handleSubmit = (e) => {
-    // stops the default behavior of form element
-    // specifically refreshing of page
+const Form = () => {
+  const [userData, setUserData] = useState(state)
+
+  const handleSubmit = (e) => {
     e.preventDefault()
-
     const {
       firstName,
       lastName,
@@ -23,15 +21,12 @@ class Form extends Component {
       bio,
       file,
       skills
-    } = this.props
+    } = userData;
 
-    const formattedSkills = []
-
-    for( const key in skills ){
+    const formattedSkills = [];
+    for(const key in skills){
       console.log(key)
-      if(skills[key]){
-        formattedSkills.push(key.toUpperCase())
-      }
+      if(skills[key]) formattedSkills.push(key.toUpperCase())
     }
 
     const data = {
@@ -52,19 +47,24 @@ class Form extends Component {
     // this is the place where we connect backend api to send the data to the database
     console.log(data)
   }
-  render(){
-    return (
-      <div className='form--container'>
-        <h3>add student</h3>
-        <form className='form' onSubmit={this.handleSubmit} noValidate>
-          <FormGroup/>
-          <div>
-            <button>Submit</button>
-          </div>
-        </form>
-      </div>
-    )
-  }
+
+  useEffect(() => {
+    setUserData((initialState) => {
+      return { ...initialState }
+    })
+  }, [])
+  
+  return(
+    <div className='form--container'>
+      <h3>add student</h3>
+      <form className='form' onSubmit={handleSubmit} noValidate>
+        <FormGroup state={userData}/>
+        <div>
+          <button className='btn'>Submit</button>
+        </div>
+      </form>
+    </div>
+  )
 }
 
 export default Form
