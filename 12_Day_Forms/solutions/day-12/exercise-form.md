@@ -100,4 +100,4 @@ We use the onChange event to update the state of a data.
 ### 15. What are event types do you use to validate an input?
 
 Validation can be done in client or server side, we using React to implement the client validation.
-A validation can implement using HTML5 built-in validation or using JavaScript (regulat expression).
+A validation can implement using HTML5 built-in validation or using JavaScript (regular expression).
