@@ -4,7 +4,9 @@ import state from '../../utils/states'
 import '../../styles/Form.scss'
 
 const Form = () => {
-  const [userData, setUserData] = useState(state)
+  const [loading, setLoading] = useState(false)
+  const [userData, setUserData] = useState({state})
+  const [error, setError] = useState(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -49,10 +51,26 @@ const Form = () => {
   }
 
   useEffect(() => {
+    // if(!userData === undefined){
+    //   setUserData((initialState) => {
+    //     return { ...initialState }
+    //   })
+    //   setLoading(true)
+    // }else {
+    //   setError(error)
+    // }
     setUserData((initialState) => {
-      return { ...initialState }
+      if({...initialState} !== undefined){
+        setLoading(true)
+        return { ...initialState }
+      }else{
+        setError(error)
+      }
     })
   }, [])
+
+  if(!loading) return 'Loading...'
+  if(error) return 'Something went wrong!'
   
   return(
     <div className='form--container'>

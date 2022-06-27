@@ -69,7 +69,7 @@ const FormGroup = ({state}) => {
           />
         </div>
       </div>
-      <div className='form-group'>
+      <div className='form--group'>
         <label htmlFor='tel'>Telephone </label>
         <input
           type='tel'
@@ -80,7 +80,7 @@ const FormGroup = ({state}) => {
         />
       </div>
 
-      <div className='form-group'>
+      <div className='form--group'>
         <label htmlFor='dateOfBirth'>Date of birth </label>
         <input
           type='date'
@@ -90,7 +90,7 @@ const FormGroup = ({state}) => {
           placeholder='Date of Birth'
         />
       </div>
-      <div className='form-group'>
+      <div className='form--group'>
         <label htmlFor='favoriteColor'>Favorite Color</label>
         <input
           type='color'
@@ -101,7 +101,7 @@ const FormGroup = ({state}) => {
           placeholder='Favorite Color'
         />
       </div>
-      <div className='form-group'>
+      <div className='form--group'>
         <label htmlFor='weight'>Weight </label>
         <input
           type='number'

@@ -6,17 +6,37 @@
   height: 5rem;
   padding-block: 0;
   margin-block-end: 1rem;
+
+  .form--group { 
+    display: flex; 
+    align-self: flex-end;
+  }
 }
 
-.form--group { 
-  display: flex; 
-  align-self: flex-end;
-}
-
-.form-group label {
+.form--group label {
   display: inline-block;
   font: 500 calc(var(--padding) * .85) var(--abel);
   padding-inline-end: .5rem;
 }
 
-.form-group input { width: 15rem; }
+.form--group input { 
+  width: 15rem;
+  align-self: center;
+}
+
+.form--group input[type='date'] {
+  width: 10rem
+}
+
+.form--group input[type='color'],
+.form--group input[type='number'] {
+  width: 5rem;
+}
+
+.bio {
+  display: block;
+
+  & textarea {
+    width: 23rem
+  }
+}

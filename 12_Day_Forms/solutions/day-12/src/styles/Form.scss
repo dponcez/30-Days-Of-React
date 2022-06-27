@@ -7,7 +7,26 @@
     width: 25rem;
     padding: 1rem;
     padding-block-end: 0;
-    background-color: var(--font-color)
+    background-color: var(--font-color);
+
+    .form--group {
+      margin-block: .125rem;
+    }
+
+    .selection,
+    .bio {
+      margin-block-start: 1rem;
+    }
+    
+    .selection,
+    .bio {
+      & label { font-weight: 600;}
+    }
+
+    .gender,
+    .skills {
+      & p { font-weight: 600; }
+    }
   }
 
   & button {
