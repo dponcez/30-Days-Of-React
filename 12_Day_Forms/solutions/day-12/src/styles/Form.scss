@@ -9,8 +9,19 @@
     padding-block-end: 0;
     background-color: var(--font-color);
 
-    .form--group {
-      margin-block: .125rem;
+    .row {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 5rem;
+      padding-block: 0;
+      margin-block-end: 1rem;
+    
+      .form--group { 
+        display: flex; 
+        align-self: flex-end;
+      }
     }
 
     .selection,
@@ -83,5 +94,37 @@
     font: 500 calc(var(--font-size) * 1.25) / 1.5 var(--abel);
     color: var(--base-color);
     text-transform: capitalize;
+  }
+
+  .form--group {
+    margin-block: .125rem;
+  }
+  
+  .form--group label {
+    display: inline-block;
+    font: 500 calc(var(--padding) * .85) var(--abel);
+    padding-inline-end: .5rem;
+  }
+  
+  .form--group input { 
+    width: 15rem;
+    align-self: center;
+  }
+  
+  .form--group input[type='date'] {
+    width: 10rem
+  }
+  
+  .form--group input[type='color'],
+  .form--group input[type='number'] {
+    width: 5rem;
+  }
+  
+  .bio {
+    display: block;
+  
+    & textarea {
+      width: 23rem
+    }
   }
 }
