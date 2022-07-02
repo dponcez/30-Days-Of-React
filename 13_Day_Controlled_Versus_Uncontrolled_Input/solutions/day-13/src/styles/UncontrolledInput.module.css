@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 25rem;
+  height: 20rem;
+  background-color: hsl(46 75% 90%);
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: space-between;
+  width: 23rem;
+  margin-block: .5rem;
+  padding-inline-start: 3rem;
+}
+
+.formGroup label {
+  display: block;
+  font-family: var(--open-sans);
+  font-size: calc(var(--font-size) * .85);
+  font-weight: 600;
+  color: var(--base-color);
+}
+
+.formGroup input {
+  padding: .25rem 1rem;
+  border: 0;
+  border-radius: .125rem;
+  box-shadow: 0 -.15vmin 0 0 hsl(31 63% 47%) inset;
+  background-color: transparent;
+  transition: box-shadow .25s ease;
+}
+
+.formGroup input:focus {
+  outline: none;
+  box-shadow: 0 -.2vmin 0 0 hsl(45 94% 4%) inset;
+}
+
+.formGroup input:hover::placeholder { color: hsl(31 65% 47%); }
+
+.formGroup input:hover::-moz-placeholder {
+  color: hsl(30 70% 47%); 
+}
+
+.formGroup input:hover::-webkit-input-placeholder {
+  color: hsl(30 75% 47%)
+}
+
+.formGroup label::first-letter { text-transform: uppercase; }
+
+.formTitle {
+  font-size: calc(var(--font-size) * 2.15);
+  font-family: var(--homenaje);
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--base-color);
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  justify-content: center;
+  width: 10rem;
+  height: 2rem;
+  position: relative;
+  padding: var(--padding);
+  margin-block-start: 2rem;
+  margin-inline-start: 3rem;
+  /* reset border */
+  border: 0;
+  border-radius: .25rem;
+  /* fonts */
+  font-size: var(--font-size);
+  font-family: var(--open-sans);
+  background-color: hsl(215 100% 46%);
+  color: var(--font-color);
+  overflow: hidden;
+  box-shadow: .25vmin .35vmin .7vmin rgba(0,0,0,.75);
+  transition: box-shadow .25s linear;
+  z-index: 2;
+}
+
+.submit::before {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: var(--size);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: hsl(209 95% 46%);
+  transition: width .25s linear, left .25s linear;
+  z-index: -1;
+}
+
+.submit:hover::before {
+  width: 100%;
+  left: 50%;
+}
+
+.submit:hover {
+  cursor: pointer;
+  box-shadow: .2vmin .3vmin .7vmin rgba(0,0,0,.7);
+}
+
+.submit:active { transform: scale(.98); }
