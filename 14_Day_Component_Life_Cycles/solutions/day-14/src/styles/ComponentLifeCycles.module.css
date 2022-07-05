@@ -1,0 +1,74 @@
+.lifeCycle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 1rem;
+}
+
+.length {
+  font-family: var(--open-sans);
+  font-size: var(--font-size);
+  font-weight: 500;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem;
+  place-items: center;
+  width: var(--size);
+  padding-inline: 0;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  width: 20rem;
+  height: 24rem;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.imageContainer {
+  display: block;
+  width: var(--size);
+  height: var(--size);
+}
+
+.imageContainer img {
+  width: var(--size);
+  height: var(--size);
+  object-fit: fill;
+  aspect-ratio: 1;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--size);
+  height: 5rem;
+  padding: .75rem;
+  background-color: hsl(201 25% 89%);
+}
+
+.infoContainer h1,
+.population { 
+  margin: 0; 
+  color: var(--base-color);
+}
+
+.infoContainer h1 {
+  font-size: calc(var(--font-size) * .95);
+  font-family: var(--homenaje);
+}
+
+.population {
+  font-size: 1rem;
+  font-family: var(--abel);
+}
