@@ -1,0 +1,130 @@
+.form--container {
+  .form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    width: 25rem;
+    padding: 1rem;
+    padding-block-end: 0;
+    background-color: var(--font-color);
+
+    .row {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 5rem;
+      padding-block: 0;
+      margin-block-end: 1rem;
+    
+      .form--group { 
+        display: flex; 
+        align-self: flex-end;
+      }
+    }
+
+    .selection,
+    .bio {
+      margin-block-start: 1rem;
+    }
+    
+    .selection,
+    .bio {
+      & label { font-weight: 600;}
+    }
+
+    .gender,
+    .skills {
+      & p { font-weight: 600; }
+    }
+  }
+
+  & button {
+    position: relative;
+    border: 0;
+    background-color: rgb(26, 157, 238);
+    color: hsl(0 0% 100%);
+    border-radius: .25rem;
+    box-shadow: .35vmin .45vmin .7vmin rgba(0,0,0,.75);
+    overflow: hidden;
+    z-index: 2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: var(--size);
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+      background-color: hsl(205 100% 46%);
+      transition: width .5s linear, left .5s linear;
+      z-index: -1;
+    }
+
+    &:hover::before { 
+      width: var(--size);
+      left: 50%;
+    }
+
+    &:focus {
+      outline: 0
+    }
+
+    &:active {
+      transform: scale(.98);
+      box-shadow: .25vmin .25vmin .5vmin rgba(0,0,0,.5)
+    }
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 2rem;
+    padding: .25rem 1rem;
+    margin-block: 1rem;
+    font: 600 var(--font-size) / 1.5 var(--homenaje);
+    cursor: pointer
+  }
+
+  & h3 {
+    font: 500 calc(var(--font-size) * 1.25) / 1.5 var(--abel);
+    color: var(--base-color);
+    text-transform: capitalize;
+  }
+
+  .form--group {
+    margin-block: .125rem;
+  }
+  
+  .form--group label {
+    display: inline-block;
+    font: 500 calc(var(--padding) * .85) var(--abel);
+    padding-inline-end: .5rem;
+  }
+  
+  .form--group input { 
+    width: 15rem;
+    align-self: center;
+  }
+  
+  .form--group input[type='date'] {
+    width: 10rem
+  }
+  
+  .form--group input[type='color'],
+  .form--group input[type='number'] {
+    width: 5rem;
+  }
+  
+  .bio {
+    display: block;
+  
+    & textarea {
+      width: 23rem
+    }
+  }
+}
