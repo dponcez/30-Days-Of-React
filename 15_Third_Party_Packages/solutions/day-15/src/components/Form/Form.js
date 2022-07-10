@@ -32,10 +32,12 @@ class Form extends Component {
       this.setState({ [name]: value })
     }
   }
+
   handleBlur = (e) => {
-    const { name, value } = e.target
+    const { name } = e.target
     this.setState({ touched: { ...this.state.touched, [name]: true } })
   }
+
   validate = () => {
     // Object to collect error feedback and to display on the form
     const errors = {
@@ -50,6 +52,7 @@ class Form extends Component {
     }
     return errors
   }
+
   handleSubmit = (e) => {
     /*
       e.preventDefault()
