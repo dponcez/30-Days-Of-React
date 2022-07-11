@@ -6,6 +6,7 @@ import '../../styles/Form.scss'
 const selectOptions = countries.map(({value, label}) => (
   <option key={value} value={value}>{ label }</option>
 ))
+
 class Form extends Component {
   // declaring state
   state = initialState
