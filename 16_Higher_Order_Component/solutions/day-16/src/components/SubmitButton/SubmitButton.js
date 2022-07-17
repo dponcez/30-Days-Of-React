@@ -1,9 +1,10 @@
 import React from 'react'
+import '../../styles/SubmitButton.scss'
 
-const SubmitButton = ({style, type, text}) => {
+const SubmitButton = ({type, text}) => {
   return (
     <button
-      style={style}
+      className='btn'
       type={type}
     >
       {text}

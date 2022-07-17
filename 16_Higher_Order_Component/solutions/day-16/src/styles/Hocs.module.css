@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 23rem;
+  margin-block: 1.5rem;
+  padding-inline-start: 0;
+}
+
+.search {
+  display: inline-block;
+  padding: .5rem 1rem;
+  box-shadow: .125vmin -.135vmin .75vmin 0 rgba(0,0,0,.75) inset;
+  font-size: 1rem;
+  border: 0;
+  border-radius: .2rem;
+}
+
+.search:hover::placeholder { color: hsl(31 65% 47%); }
+
+.search:hover::-moz-placeholder {
+  color: hsl(30 70% 47%); 
+}
+
+.search:hover::-webkit-search-placeholder {
+  color: hsl(30 75% 47%)
+}
+
+.button {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 2rem;
+  padding: .5rem 1.15rem;
+  border: 0;
+  border-radius: .25rem;
+  font-weight: 600;
+  box-shadow: .25vmin .35vmin .6vmin rgba(0,0,0,.75);
+  cursor: pointer
+}
