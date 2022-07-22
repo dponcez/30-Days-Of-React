@@ -1,8 +1,11 @@
 import React from 'react'
+import NavLink from '../NavLink/NavLink'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className='Header'>
+      <NavLink/>
+    </div>
   )
 }
 
