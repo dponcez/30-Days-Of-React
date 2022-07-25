@@ -1,0 +1,49 @@
+.Blog--container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: var(--vh);
+
+  :is(h1, p){
+    margin: 0;
+    color: var(--base-color);
+    font-family: var(--homenaje)
+  }
+
+  .text--404 {
+    font-size: calc(var(--font-size) * 7);
+    & span {
+      display: inline-block;
+      font-size: calc(var(--font-size) * 4);
+      font-family: var(--abel);
+      font-weight: 300;
+      animation: move .7s infinite alternate;
+      @keyframes move {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-2rem);
+        }
+      }
+    }
+  }
+  .not--available,
+  & p:last-child {
+    display: block;
+    &::first-letter {
+      text-transform: uppercase
+    }
+  }
+
+  .not--available {
+    display: block;
+    font-size: calc(var(--font-size) * 3);
+  }
+
+  & p:last-child {
+    font-family: var(--abel);
+    font-size: calc(var(--font-size) * 1.5)
+  }
+}

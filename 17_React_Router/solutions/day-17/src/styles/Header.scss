@@ -7,7 +7,7 @@
 
 .Header {
   justify-content: center;
-  height: 80vh;
+  height: var(--vh);
   position: relative;
 
   .heading--container {
@@ -46,7 +46,7 @@
 
   .image {
     width: var(--size);
-    height: auto;
+    height: var(--vh);
     object-fit: cover;
     aspect-ratio: 1;
     z-index: -1;

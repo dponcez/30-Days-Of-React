@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../../styles/NavLink.scss'
 
 const NavLink = () => {
@@ -6,11 +7,31 @@ const NavLink = () => {
   return (
     <nav className='Nav'>
       <ul className='Nav--menu'>
-        {navMenu.map((item, index) => (
-          <li className='Nav--menu__list' key={index}>
-            <a className='Nav--menu__link' href='#'>{item}</a>
-          </li>
-        ))}
+        <li className='Nav--menu__list'>
+          <Link 
+            className='Nav--menu__link' 
+            to="/">{navMenu[0]}</Link>
+        </li>
+        <li className='Nav--menu__list'>
+          <Link 
+            className='Nav--menu__link' 
+            to="/about">{navMenu[1]}</Link>
+        </li>
+        <li className='Nav--menu__list'>
+          <Link 
+            className='Nav--menu__link' 
+            to="/portfolio">{navMenu[2]}</Link>
+        </li>
+        <li className='Nav--menu__list'>
+          <Link 
+            className='Nav--menu__link' 
+            to="/blog">{navMenu[3]}</Link>
+        </li>
+        <li className='Nav--menu__list'>
+          <Link 
+            className='Nav--menu__link' 
+            to="/contact">{navMenu[4]}</Link>
+        </li>
       </ul>
     </nav>
   )

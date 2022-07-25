@@ -1,0 +1,74 @@
+.About--container,
+.container,
+.figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.figure,
+.figcaption {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.About--container {
+  .container {
+    width: calc(var(--size) * .5);
+    height: var(--vh);
+  }
+  
+  .figure {
+    padding: 0;
+    margin: 0;
+    background-color: lightcyan;
+
+    .figcaption {
+      .About--name,
+      .About--info { 
+        margin: 0;
+        text-transform: capitalize;
+        color: var(--base-color)
+      }
+
+      .About--name {
+        margin-block-start: 1rem;
+        font-size: 1.25rem;
+        font-family: var(--abel)
+      }
+
+      .About--info {
+        font-size: 2.5rem;
+        font-family: var(--homenaje);
+      }
+    }
+  }
+  
+  .info {
+    padding: var(--padding);
+    & p {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      letter-spacing: .025rem;
+    }
+  }
+}
+
+.About {
+  height: var(--vh);
+  &--image__container {
+    display: grid;
+    place-items: center;
+    width: 20rem;
+    height: 20rem;
+    border-radius: calc(var(--size) * .5);
+    border: .5rem solid var(--base-color);
+    overflow: hidden;
+    & img {
+      width: var(--size);
+      height: var(--size);
+      object-fit: cover;
+      aspect-ratio: 1;
+    }
+  }
+}
