@@ -1,10 +1,10 @@
 import React from 'react'
-import NavLink from '../NavLink/NavLink'
-import Home from '../pages/Home'
-import About from '../pages/About'
-import Portfolio from '../pages/Portfolio'
-import Blog from '../pages/Blog'
-import Contact from '../pages/Contact'
+import NavLink from '../../NavLink/NavLink'
+import Home from '../../pages/Home'
+import About from '../../pages/About'
+import Portfolio from '../../pages/Portfolio'
+import Blog from '../../pages/Blog'
+import Contact from '../../pages/Contact'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const Main = () => {

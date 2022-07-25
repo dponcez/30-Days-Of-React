@@ -5,7 +5,7 @@ import {
   faTwitter,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import '../../styles/Contact.scss'
+import '../styles/Contact.scss'
 
 const Contact = () => {
   return (
