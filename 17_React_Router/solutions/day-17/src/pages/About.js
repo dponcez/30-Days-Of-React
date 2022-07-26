@@ -1,6 +1,6 @@
 import React from 'react'
-import asabeneh from '../../assets/images/asabeneh.jpg'
-import '../../styles/About.scss'
+import asabeneh from '../assets/images/asabeneh.jpg'
+import '../styles/About.scss'
 
 const About = () => {
   return (
