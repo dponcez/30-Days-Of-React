@@ -1,5 +1,5 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-cs-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -10,6 +10,9 @@ module.exports = {
     "publicPath": "/"
   },
   mode: "development",
+  "resolve": {
+    extensions: [".js", ".jsx"]
+  },
   module: {
     rules: [
       {
