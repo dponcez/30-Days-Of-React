@@ -11,7 +11,7 @@ const CatBreeds = () => {
 
   const api_key = "13f1a0be-f901-474d-96d5-2afb36e2fad8"
   const BASE_URL = "https://api.thecatapi.com";
-  
+
   useEffect(() => {
     fetchData()
   }, [])

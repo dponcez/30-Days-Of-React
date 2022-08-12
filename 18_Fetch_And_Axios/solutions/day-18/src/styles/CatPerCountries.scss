@@ -1,0 +1,84 @@
+.cats--paradise {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  & :is(h2, h3, p) {
+    margin: 1rem; 
+    color: var(--base-color);
+    &::first-letter { text-transform: uppercase; }
+  }
+
+  & :is(h2, h3) { font-family: var(--ubuntu); }
+
+  & h3 {
+    & span {
+      padding: .35rem;
+      background-color: var(--base-color);
+      color: var(--font-color);
+      font-family: var(--homenaje);
+      border-radius: .5rem
+    }
+  }
+
+  & p {
+    font-family: var(--abel);
+    & span {
+      font-weight: 600
+    }
+  }
+
+  & p:nth-child(2) {
+    margin: 0;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+  }
+
+  .table--container,
+  thead,
+  tbody,
+  tr {
+    width: var(--size)
+  }
+
+  .table--container,
+  thead tr,
+  tbody tr {
+    display: flex;
+    align-items: center;
+  }
+
+  .table--container {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 35rem;
+    border: .1rem solid var(--base-color);
+    border-radius: .5rem;
+  }
+
+  thead tr { 
+    justify-content: space-around; 
+    & th {
+      width: var(--size);
+      font-size: var(--font-size);
+      font-family: var(--homenaje);
+      text-transform: capitalize;
+      border: .1rem solid var(--base-color);
+      border-collapse: collapse;
+
+      &:first-child {
+        border-top-left-radius: .5rem;
+      }
+
+      &:last-child {
+        border-top-right-radius: .5rem
+      }
+    }
+  }
+
+  tbody tr {
+    justify-content: space-around;
+    font-family: var(--abel)
+  }
+}
