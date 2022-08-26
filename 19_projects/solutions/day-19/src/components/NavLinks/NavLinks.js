@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './NavLinks.scss'
 
 const NavLinks = () => {
-  const links = ['home', 'about', 'dummy data']
+  const links = ['home', 'cat cards', 'about', 'dummy data']
   return (
     <nav className='Nav'>
       <ul className='Nav--menu'>
@@ -18,7 +18,7 @@ const NavLinks = () => {
         <li className='Nav--menu__item'>
           <Link 
             className='Nav--menu__link'
-            to='/about'
+            to='/cards'
           >
             {links[1]}
           </Link>
@@ -26,9 +26,17 @@ const NavLinks = () => {
         <li className='Nav--menu__item'>
           <Link 
             className='Nav--menu__link'
-            to='/dummy-data'
+            to='/about'
           >
             {links[2]}
+          </Link>
+        </li>
+        <li className='Nav--menu__item'>
+          <Link 
+            className='Nav--menu__link'
+            to='/dummy-data'
+          >
+            {links[3]}
           </Link>
         </li>
       </ul>

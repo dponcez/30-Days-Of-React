@@ -1,0 +1,72 @@
+.About {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin-block-start: 5rem;
+  padding: 0 4rem;
+
+  &--container {
+    padding: 0 2rem;
+  }
+
+  .introduction {
+    .list {
+      .item {
+        font-size: 1.125rem;
+        font-family: var(--open-sans);
+      }
+    }
+  }
+
+  &--title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: calc(var(--font-size) * 1.2);
+    font-family: var(--homenaje);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+
+    .link { font-style: italic; }
+  }
+
+  .link {
+    padding: .35rem .75rem;
+    margin: 0;
+    color: var(--base-color);
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: .1rem solid var(--base-color);
+    transition: background-color .25s linear, color .15s linear;
+    &:hover {
+      background-color: #61DBFB;
+      color: var(--font-color);
+    }
+  }
+
+  & article {
+    padding: 0 2rem;
+
+    & pre {
+      width: var(--size);
+      max-width: 25rem;
+      padding: .75rem 2rem;
+      font-size: 1.25rem;
+      font-family: var(--abel);
+      font-weight: 700;
+      background-color: #f5f5f5;
+      border: .2rem solid #d1cdcd;
+      border-radius: .25rem;
+      color: #969393;
+    }
+  }
+
+  .description {
+    font-size: 1.25rem;
+    font-family: var(--open-sans);
+    & .link {
+      font-family: var(--ubuntu);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.cats--paradise {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-block-end: 2rem;
+
+  & :is(h1, h2, p) {
+    margin: 1rem; 
+    color: var(--base-color);
+    &::first-letter { text-transform: uppercase; }
+  }
+
+  & :is(h1, h2) { font-family: var(--ubuntu); }
+
+  & h2 { 
+    font-weight: 400; 
+    & span {
+      display: inline-block;
+      padding: .125rem;
+      background-color: var(--base-color);
+      color: var(--font-color);
+    }
+  }
+
+  & p {
+    margin: 0;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    font-size: 1.25rem;
+    font-family: var(--abel);
+    & span {
+      font-weight: 600
+    }
+  }
+}

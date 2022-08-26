@@ -1,5 +1,19 @@
 .App {
   display: grid;
   grid-template-columns: 1fr;
-  position: relative;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+    'header header header'
+    'footer footer footer'
+  ;
+  height: var(--vh)
+}
+
+.Header {
+  grid-area: header;
+}
+
+.Footer {
+  grid-area: footer;
+  grid-row: 3;
 }

@@ -1,26 +1,26 @@
 .Footer--container,
 .social--media,
 .copyright {
-  display    : flex;
+  display: flex;
   align-items: center;
 }
 
 .Footer--container {
-  flex-direction  : column;
-  justify-content : center;
-  width           : var(--size);
-  height          : auto;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--size);
+  height: auto;
   background-color: #0f131f;
 
   .social--media {
     justify-content: space-evenly;
-    width          : var(--size);
-    max-width      : 20rem;
-    padding        : var(--padding);
+    width: var(--size);
+    max-width: 20rem;
+    padding: var(--padding);
 
     & a {
-      color     : var(--font-color);
-      font-size : 1.25rem;
+      color: var(--font-color);
+      font-size: 1.25rem;
       transition: transform .25s cubic-bezier(0.075, 0.82, 0.165, 1);
 
       &:hover {
@@ -31,15 +31,15 @@
 
   .copyright {
     justify-content: space-around;
-    width          : 30%;
-    max-width      : 15rem;
-    padding        : 0;
+    width: 30%;
+    max-width: 15rem;
+    padding: 0;
 
     & p {
-      color         : var(--font-color);
-      font-size     : 1rem;
-      font-family   : var(--abel);
-      font-weight   : 400;
+      color: var(--font-color);
+      font-size: 1rem;
+      font-family: var(--abel);
+      font-weight: 400;
       text-transform: capitalize;
       letter-spacing: .1rem;
 

@@ -1,0 +1,29 @@
+.DummyData {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(var(--vh) - 1rem);
+
+  :is(h2, p) {
+    margin: .5rem 0;
+  }
+
+  & .heading {
+    font-size: 4.25rem;
+    font-family: var(--homenaje);
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  & .description {
+    width: var(--size);
+    max-width: 65rem;
+    padding: 1rem 2rem;
+    margin: 0;
+    font-size: 1.25rem;
+    font-family: var(--open-sans);
+    font-weight: 400;
+    background-color: #f5f5dc;
+  }
+}
